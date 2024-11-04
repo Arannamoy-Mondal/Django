@@ -52,7 +52,7 @@ pip install pyautogui
 ```
 
 # Django install:
-
+`For install`
 ```txt
 pip install django
 ```
