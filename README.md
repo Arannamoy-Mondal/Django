@@ -93,3 +93,13 @@ urls.py ==> contains url with application,
 wsgi.py ==> (Web Server Gateway Interface) how a web server communicates with web application, synchronus system
 manage.py ==> for project specific command line utility
 ```
+``
+The most outer folder is called inner folder and it has a same name folder which is called outer folder.
+Generally outer folder has 5 types of file. These are 
+__init__.py ==> considered as python package,
+asgi.py ==> asynchronus and synchronus,
+setting.py ==> Database Config Information, Template, Installed Application, Validators, mother of django
+urls.py ==> contains url with application,
+wsgi.py ==> (Web Server Gateway Interface) how a web server communicates with web application, synchronus system
+manage.py ==> for project specific command line utility     
+``
