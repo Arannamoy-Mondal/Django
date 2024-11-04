@@ -69,10 +69,6 @@ pip install django==version
 ```txt
 pip list
 ```
-`For create project`
-```txt
-django-admin startproject projectName
-```
 
 `
 For confirm django framework file created successfully run this command and copy paste the ip address in browser
@@ -80,6 +76,16 @@ For confirm django framework file created successfully run this command and copy
 
 ```txt
 python project1/manage.py runserver
+```
+
+`For create project`
+```txt
+django-admin startproject projectName
+```
+
+`For create application`
+```txt
+django-admin startapp appName
 ```
 
 `About folder`
@@ -93,13 +99,3 @@ urls.py ==> contains url with application,
 wsgi.py ==> (Web Server Gateway Interface) how a web server communicates with web application, synchronus system
 manage.py ==> for project specific command line utility
 ```
-``
-The most outer folder is called inner folder and it has a same name folder which is called outer folder.
-Generally outer folder has 5 types of file. These are 
-__init__.py ==> considered as python package,
-asgi.py ==> asynchronus and synchronus,
-setting.py ==> Database Config Information, Template, Installed Application, Validators, mother of django
-urls.py ==> contains url with application,
-wsgi.py ==> (Web Server Gateway Interface) how a web server communicates with web application, synchronus system
-manage.py ==> for project specific command line utility     
-``
