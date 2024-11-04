@@ -74,9 +74,9 @@ pip list
 django-admin startproject projectName
 ```
 
-```txt
+`
 For confirm django framework file created successfully run this command and copy paste the ip address in browser
-```
+`
 
 ```txt
 python project1/manage.py runserver
