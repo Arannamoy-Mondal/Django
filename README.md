@@ -69,3 +69,7 @@ pip install django==version
 ```txt
 pip list
 ```
+`For create project`
+```txt
+django-admin startproject projectName
+```
