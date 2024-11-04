@@ -51,3 +51,13 @@ pip uninstall pyautogui mouseinfo
 pip install pyautogui
 ```
 
+# Django install:
+
+```txt
+pip install django
+```
+
+`For see current version:`
+```txt
+django-admin --version
+```
