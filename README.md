@@ -61,3 +61,7 @@ pip install django
 ```txt
 django-admin --version
 ```
+`For all package list in pip`
+```txt
+pip list
+```
