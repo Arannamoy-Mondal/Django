@@ -61,6 +61,10 @@ pip install django
 ```txt
 django-admin --version
 ```
+`For specific version:`
+```txt
+pip install django==version
+```
 `For all package list in pip`
 ```txt
 pip list
