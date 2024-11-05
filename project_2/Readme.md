@@ -1,4 +1,4 @@
-<h2 style="text-align:center;font-size:2.5rem;color:white">Part-2 contains:</h2>
+<h1 style="text-align:center;font-size:2.5rem;color:white">Part-2 contains:</h1>
 <ol style="background: white;">
         <li style="color: black;font-size: 1.5rem;">Render templates globally</li>
         <li style="color: black;font-size: 1.5rem;">Render templates from app</li>
@@ -62,4 +62,5 @@ def index(request):
 
     <!-- This conditional statement are case sensitive. So, it must be written in python sytle -->
 ```
-<h3>For explore more<a href="https://earthly.dev/blog/django-template-filters/">Click Here1</a>,<a href="https://www.geeksforgeeks.org/django-template-filters/">Click Here2</a></h3>
+<h1>DTL Filtering:</h1>
+<h3>For explore more<a href="https://earthly.dev/blog/django-template-filters/">Click Here1</a>, <a href="https://www.geeksforgeeks.org/django-template-filters/">Click Here2</a></h3>
