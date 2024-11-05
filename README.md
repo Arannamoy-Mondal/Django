@@ -93,11 +93,12 @@ django-admin startapp appName
 The most outer folder is called root folder and it has a same name folder which is called inner folder.
 Generally outer folder has 5 types of file. These are 
 __init__.py ==> considered as python package,
-asgi.py ==> asynchronus and synchronus,
-setting.py ==> Database Config Information, Template, Installed Application, Validators, mother of django
+asgi.py ==> asgi.py exists in inner project folder. asynchronus and synchronus,
+setting.py ==>settings.py exists in inner project folder. Database Config Information, Template, Installed Application, Validators, mother of django
 urls.py ==> contains url with application,
 wsgi.py ==> (Web Server Gateway Interface) how a web server communicates with web application, synchronus system
-manage.py ==> for project specific command line utility
+manage.py ==> manage.py exists in root folder. for project specific command line utility. 
 ```
 
 `For admin login run manage.py as runserver and get an ip address and add /admin  with this url and press enter`
+
