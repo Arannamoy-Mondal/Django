@@ -88,7 +88,7 @@ django-admin startproject projectName
 django-admin startapp appName
 ```
 
-`About folder`
+`About project folder`
 ```txt
 The most outer folder is called root folder and it has a same name folder which is called inner folder.
 Generally outer folder has 5 types of file. These are 
@@ -102,3 +102,4 @@ manage.py ==> manage.py exists in root folder. for project specific command line
 
 `For admin login run manage.py as runserver and get an ip address and add /admin  with this url and press enter`
 
+# Django Template Language ( DTL ):

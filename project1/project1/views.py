@@ -1,2 +1,0 @@
-def contact(request):
-    pass
