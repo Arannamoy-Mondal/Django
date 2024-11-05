@@ -1,2 +1,5 @@
+from django.http import HttpResponse
+def home(request):
+    return HttpResponse("Home page")
 def contact(request):
-    pass
+    return HttpResponse("This Contact Page")
