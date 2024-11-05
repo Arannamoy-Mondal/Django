@@ -31,7 +31,7 @@ def index(request):
     return render(request,'file.html')
 ```
 
-<h1>3. Context: </h1>
+<h1>(3+). Context and DTL: </h1>
 <h2>Context means backend to frontend</h2>
 <h3>For context, take a dictionary input in views.py. Then return it. For print value use {{value}} and others {% for loop %}</h3>
 <h3>Sample code:</h3>
