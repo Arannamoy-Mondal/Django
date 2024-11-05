@@ -21,5 +21,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
     path('app/',include('app2.urls')),
-    path('global/',views.global1)
 ]
