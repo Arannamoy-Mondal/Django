@@ -1,4 +1,8 @@
-# Git 
+# Git is a version control system. Git and Github not same. Github, Gitlab and Bitbucket are code hosting platform for version control.
+
+#
+#
+
 # Useful command for git
 # For set global user name and email
 ```txt
