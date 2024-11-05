@@ -90,7 +90,7 @@ django-admin startapp appName
 
 `About folder`
 ```txt
-The most outer folder is called inner folder and it has a same name folder which is called outer folder.
+The most outer folder is called root folder and it has a same name folder which is called inner folder.
 Generally outer folder has 5 types of file. These are 
 __init__.py ==> considered as python package,
 asgi.py ==> asynchronus and synchronus,
@@ -99,3 +99,5 @@ urls.py ==> contains url with application,
 wsgi.py ==> (Web Server Gateway Interface) how a web server communicates with web application, synchronus system
 manage.py ==> for project specific command line utility
 ```
+
+`For admin login run manage.py as runserver and get an ip address and add /admin  with this url and press enter`
