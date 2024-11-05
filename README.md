@@ -99,6 +99,16 @@ urls.py ==> contains url with application,
 wsgi.py ==> (Web Server Gateway Interface) how a web server communicates with web application, synchronus system
 manage.py ==> manage.py exists in root folder. for project specific command line utility. 
 ```
+`About app folder`
+```txt
+app folder has no built in urls.py.
+admin.py ==> for admin
+apps.py
+models.py ==> for database
+test.py ==> for testing
+views.py ==> for logical work
+```
+
 
 `For admin login run manage.py as runserver and get an ip address and add /admin  with this url and press enter`
 

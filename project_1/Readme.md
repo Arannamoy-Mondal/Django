@@ -31,5 +31,20 @@ urlpatterns = [
 <hr>
 Practice: How to open home page?
 Practice: How to open home page default? It means when you enter the link it redirect home page.
+Practice: How to create an app and create urls.py?
+<hr>
+
+How to create app and set up with project?
+Ans: create app using command. Then, add the app name in project/setting.py.
+
+```py
+INSTALLED_APPS = [
+    //previous data must be kept.
+    'app_1',
+]
+```
+<hr>
+Set a request for "http://127.0.0.1:8000/app_1/Hello/" and show Hello World in screen?
+Ans:
 
 </p>
