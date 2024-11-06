@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project2</title>
 </head>
+
 <body>
     <h1>Welcome to global</h1>
     <h2>If you want to check global just copy paste 127.0.0.1:8000</h2>
@@ -17,9 +19,18 @@
     <!-- conditional statement -->
 
     {% if age >= 20 %}
-           <h3>Your get driving license </h3>
+    <h3>Your get driving license </h3>
     {% else %}
-           <h3>You do not get driving license</h3>
+    <h3>You do not get driving license</h3>
     {% endif %}
+
+    <!-- DTL Filtering -->
+    {{list}}
+    <!--list filtering-->
+    <!-- Join function it concates a list of string. This is a case sensitive function  -->
+    <h3>{{list|join:" "}}</h3>
+    <!-- datetime filtering -->
+     <h3>{{time| date:"D d M Y"}}</h3>
 </body>
+
 </html>

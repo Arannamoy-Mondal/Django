@@ -63,4 +63,24 @@ def index(request):
     <!-- This conditional statement are case sensitive. So, it must be written in python sytle -->
 ```
 <h1>DTL Filtering:</h1>
+<h2>join filtering:</h2> 
+<h3>it concates a list of string. Example: a=["Hello","Hi","Bye"]. After using join filter it returns "Hello Hi Bye" in frontend html.</h3>
+```html
+   {{list}}
+    <!-- Join function it concates a list of string. This is a case sensitive function  -->
+    <h3>{{list|join:" "}}</h3> 
+```
+<h2>Date time filter:</h2>
+
+`Python Code:`
+
+```py
+import datetime
+"time":datetime.datetime.now()
+```
+`HTML Code:`
+
+```HTML
+<h3>{{time| date:"D d M Y"}}</h3>
+```
 <h3>For explore more<a href="https://earthly.dev/blog/django-template-filters/">Click Here1</a>, <a href="https://www.geeksforgeeks.org/django-template-filters/">Click Here2</a></h3>
