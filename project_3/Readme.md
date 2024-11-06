@@ -7,9 +7,35 @@
 </ol>
 <hr>
 <h1 class="heading">Static files:</h1>
-<h3 class="details">Static files can be added in globally or app folder.</h3>
+<h3 class="details">Static files can be added in globally or app folder. Must change in settings.py file.</h3>
+
+`Changes code`
+
+```py
+
+STATIC_URL = 'static/'
+STATICFILES_DIRS=[BASE_DIR/'static'] 
+
+```
+```html
+<img src="{% static 'filename.jpeg' %}">
+```
+
 <h1 class="heading">CSS framework adding:</h1>
-<h3 class="details"></h3>
+<h3 class="details">Same as static files. Just add CDN link on base.html</h3>
+
+`Changes code`
+
+```py
+
+STATIC_URL = 'static/'
+STATICFILES_DIRS=[BASE_DIR/'static'] 
+
+```
+```html
+<img src="{% static 'filename.jpeg' %}">
+```
+
 <h1 class="heading">URL Tag:</h1>
 <h3 class="details"></h3>
 <h1 class="heading">Template Inheritance:</h1>
