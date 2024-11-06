@@ -22,6 +22,7 @@ from django.shortcuts import render
 def index(request):
     return render(request,'file.html')
 ```
+
 <h2>For app:</h2>
 <h3>At first need to create a folder named templates in app folder. Then create a folder in this templates folder. Then, create html file as usual. Now, it ready for render.</h3>
 
@@ -47,21 +48,22 @@ def index(request):
 ```
 
 ```html
-    <!-- value -->
-    <h2>{{name}}</h2>
-    <h3>{{fullName}}</h3>
-    <h3>{{address}}</h3>
+<!-- value -->
+<h2>{{name}}</h2>
+<h3>{{fullName}}</h3>
+<h3>{{address}}</h3>
 
-    <!-- conditional statement -->
+<!-- conditional statement -->
 
-    {% if age >= 20 %}
-           <h3>Your get driving license </h3>
-    {% else %}
-           <h3>You do not get driving license</h3>
-    {% endif %}
+{% if age >= 20 %}
+<h3>Your get driving license</h3>
+{% else %}
+<h3>You do not get driving license</h3>
+{% endif %}
 
-    <!-- This conditional statement are case sensitive. So, it must be written in python sytle -->
+<!-- This conditional statement are case sensitive. So, it must be written in python sytle -->
 ```
+
 <h1>DTL Filtering:</h1>
 <h2>join filtering:</h2> 
 <h3>it concates a list of string. Example: a=["Hello","Hi","Bye"]. After using join filter it returns "Hello Hi Bye" in frontend html.</h3>
@@ -78,9 +80,79 @@ def index(request):
 import datetime
 "time":datetime.datetime.now()
 ```
+
 `HTML Code:`
 
 ```HTML
 <h3>{{time| date:"D d M Y"}}</h3>
 ```
-<h3>For explore more<a href="https://earthly.dev/blog/django-template-filters/">Click Here1</a>, <a href="https://www.geeksforgeeks.org/django-template-filters/">Click Here2</a></h3>
+
+<h2>Empty string filter:</h2>
+
+`Python Code:`
+
+```py
+"empty":""
+```
+
+`HTML Code:`
+
+```HTML
+<h3>{{empty|default:"an empty string"}}</h3>
+```
+
+<h2>cut filter:</h2>
+<h3>cut filter remove the space or specific character from the string. Syntax: {{value|cut:"specificCharacter"}}</h3>
+```HTML
+<h3>{{"Pythona isa funa."|cut:"a" }}</h3>
+```
+<h2>Length filter:</h2>
+<h3>It returns string length.</h3>
+
+```html 
+<h3>{{"value"|length}}</h3>
+```
+
+<h2>Timesince filter:</h2>
+<h3>It works like post time of youtube, facebook</h3>
+```html
+```
+
+<h2>Truncate characters filter:</h2>
+<h3><h3>
+
+```py
+from django.shortcuts import render
+import datetime
+def index(request):
+    data={
+        "name":"Hello World","age":20,"address":"Annapolis, Maryland","fullName":['Macbook air m1'],
+        "list":["Hello","Hi","Bye"],"time":datetime.datetime.now(),"empty":"","truncate":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa corporis quae, fugiat, ex inventore tenetur"
+        +"delectus culpa placeat quibusdam incidunt rerum. Natus facilis ipsam velit aspernatur, temporibus error"
+        +"provident ipsum!"
+    }
+    return render(request,'index.html',data)
+```
+```html
+<h3>{{truncate|truncatechars:4}}</h3>
+```
+
+<h2>Truncate word filter:</h2>
+
+```py
+from django.shortcuts import render
+import datetime
+def index(request):
+    data={
+        "name":"Hello World","age":20,"address":"Annapolis, Maryland","fullName":['Macbook air m1'],
+        "list":["Hello","Hi","Bye"],"time":datetime.datetime.now(),"empty":"","truncate":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa corporis quae, fugiat, ex inventore tenetur"
+        +"delectus culpa placeat quibusdam incidunt rerum. Natus facilis ipsam velit aspernatur, temporibus error"
+        +"provident ipsum!"
+    }
+    return render(request,'index.html',data)
+```
+```html
+<h3>{{truncate|truncatewords:4}}</h3>
+```
+<h3>For explore more <a href="https://earthly.dev/blog/django-template-filters/">https://earthly.dev/</a>, <a href="https://www.geeksforgeeks.org/django-template-filters/">GFG</a>, 
+<a href="https://www.w3schools.com/django/">W3School</a>
