@@ -13,9 +13,35 @@
 <h1 class="heading">URL Tag:</h1>
 <h3 class="details"></h3>
 <h1 class="heading">Template Inheritance:</h1>
-<h3 class="details"></h3>
+<h3 class="details">Two type of templates. 1. Parent templates (base.html), 2. Child templates.</h3>
 
+`Sample code of base.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+       Here, child template content will be written
+    {% endblock %}
+</body>
+</html>
+```
 
+`Sample code of child templplate`
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+
+<h1> Hello Django </h1>
+
+{% endblock %}
+```
 
 <!-- Template for readme -->
 <!-- 
