@@ -7,7 +7,7 @@
 </ol>
 <hr>
 <h1 class="heading">Static files:</h1>
-<h3 class="details">Static files can be added in project and app folder</h3>
+<h3 class="details">Static files can be added in globally or app folder.</h3>
 <h1 class="heading">CSS framework adding:</h1>
 <h3 class="details"></h3>
 <h1 class="heading">URL Tag:</h1>
