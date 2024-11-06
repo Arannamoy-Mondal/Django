@@ -21,7 +21,7 @@ cd environments
 python3 -m venv my_env
 ```
 ```
-ls my_env
+ls my_env;
 ```
 ```
 source my_env/bin/activate
