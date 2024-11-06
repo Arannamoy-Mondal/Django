@@ -33,7 +33,7 @@ STATICFILES_DIRS=[BASE_DIR/'static']
 
 ```
 ```html
-<img src="{% static 'filename.jpeg' %}">
+<link rel="stylesheet" href="{% static 'stysheet.css' %}">
 ```
 
 <h1 class="heading">URL Tag:</h1>
