@@ -1,21 +1,33 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-</head>
-
-<body>
-    <h1 style="text-align: center">Home page</h1>
+{% extends 'base.html' %}
+{% block content %}
+<div id="table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">User Id</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <th style="text-wrap: wrap;">{{i.userId}}</th>
+                        <td style="text-wrap: wrap;">{{i.id}}</td>
+                        <td style="text-wrap: wrap;">{{i.title}}</td>
+                        <td style="text-wrap: wrap;">{{i.body}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+<h1 style="text-align: center" class="py-5">Home page global</h1>
     <div class="image-containers" style="display: flex; justify-content: center">
         <img src="../static/download (1).jpeg" alt="" />
         <img src="../static/download (2).jpeg" alt="" />
         <img src="../static/download (3).jpeg" alt="" /><img src="../static/download.jpeg" alt="" />
     </div>
-    <div class="image-containers" style="display: flex;justify-content: center;"><img src="{% static 'images.jpeg' %}" alt=""><img src="" alt=""><img src="" alt=""></div>
-</body>
 
-</html>
+
+{% endblock %}
