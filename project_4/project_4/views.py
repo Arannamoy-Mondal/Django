@@ -12,3 +12,7 @@ def aboutPage(request):
 def contactPage(request):
     print(request.GET)
     return render(request,'contact.html')
+
+def signUpForms(request):
+    print(request.GET)
+    return render(request,'signUpForm.html')

@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("app4.urls")),
     path('about/',views.aboutPage,name='about'),
-    path('contact/',views.contactPage,name='contact')
+    path('contact/',views.contactPage,name='contact'),
+    path('signUpForms/',views.signUpForms,name='signUpForms')
 ]
