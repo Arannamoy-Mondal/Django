@@ -49,6 +49,8 @@ STATICFILES_DIRS=[BASE_DIR/'static']
 
 <img src="../urlTagging.png">
 
+<h3>In this, ss line no 6,7,8,9 has an extra parameter (name="someThing") must be given and name parameter will be same as <code><pre>href="{% url "someThing"  %}"</pre></code> double quote name.
+
 ```html
 
 <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact</a>
