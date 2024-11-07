@@ -67,12 +67,17 @@ def index(request):
 <h1>DTL Filtering:</h1>
 <h2>join filtering:</h2> 
 <h3>it concates a list of string. Example: a=["Hello","Hi","Bye"]. After using join filter it returns "Hello Hi Bye" in frontend html.</h3>
+
 ```html
+
    {{list}}
     <!-- Join function it concates a list of string. This is a case sensitive function  -->
     <h3>{{list|join:" "}}</h3> 
+
 ```
+
 <h2>Date time filter:</h2>
+
 
 `Python Code:`
 
@@ -98,30 +103,39 @@ import datetime
 `HTML Code:`
 
 ```HTML
+
 <h3>{{empty|default:"an empty string"}}</h3>
+
 ```
 
 <h2>cut filter:</h2>
 <h3>cut filter remove the space or specific character from the string. Syntax: {{value|cut:"specificCharacter"}}</h3>
+
 ```HTML
+
 <h3>{{"Pythona isa funa."|cut:"a" }}</h3>
+
 ```
 <h2>Length filter:</h2>
 <h3>It returns string length.</h3>
 
 ```html 
+
 <h3>{{"value"|length}}</h3>
+
 ```
 
 <h2>Timesince filter:</h2>
 <h3>It works like post time of youtube, facebook</h3>
+
 ```html
+
 ```
 
 <h2>Truncate characters filter:</h2>
-<h3><h3>
 
 ```py
+
 from django.shortcuts import render
 import datetime
 def index(request):
@@ -132,14 +146,18 @@ def index(request):
         +"provident ipsum!"
     }
     return render(request,'index.html',data)
+
 ```
+
 ```html
+
 <h3>{{truncate|truncatechars:4}}</h3>
 ```
 
 <h2>Truncate word filter:</h2>
 
 ```py
+
 from django.shortcuts import render
 import datetime
 def index(request):
@@ -150,9 +168,13 @@ def index(request):
         +"provident ipsum!"
     }
     return render(request,'index.html',data)
+
 ```
+
 ```html
+
 <h3>{{truncate|truncatewords:4}}</h3>
+
 ```
 <h3>For explore more <a href="https://earthly.dev/blog/django-template-filters/">https://earthly.dev/</a>, <a href="https://www.geeksforgeeks.org/django-template-filters/">GFG</a>, 
 <a href="https://www.w3schools.com/django/">W3School</a>
