@@ -36,8 +36,49 @@ STATICFILES_DIRS=[BASE_DIR/'static']
 <link rel="stylesheet" href="{% static 'stysheet.css' %}">
 ```
 
-<h1 class="heading">URL Tag:</h1>
-<h3 class="details"></h3>
+<div id="urlTag">
+<a href="#topic">Topic</a>
+<h1>URL Tag:</h1>
+<h3></h3>
+
+`URL Tagging:`
+
+```html
+
+<a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact</a>
+
+```
+
+`urls.py:`
+
+```py
+
+from django.contrib import admin
+from django.urls import path,include
+from . import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.home,name='home'),
+    path('app/',include('app3.urls'),name='app'),
+    path('about/',views.aboutPage,name='about'),
+    path('contact/',views.contact,name='contact')
+]
+
+```
+
+`views.py:`
+
+```py
+
+def aboutPage(request):
+    return render(request,'index.html')
+
+```
+
+</div>
+
+
+
 <h1 class="heading">Template Inheritance:</h1>
 <h3 class="details">Two type of templates. 1. Parent templates (base.html), 2. Child templates.</h3>
 
