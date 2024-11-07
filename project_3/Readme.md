@@ -45,6 +45,10 @@ STATICFILES_DIRS=[BASE_DIR/'static']
 
 `URL Tagging:`
 
+`Syntax of urls.py:`
+
+<img src="../urlTagging.png">
+
 ```html
 
 <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact</a>
