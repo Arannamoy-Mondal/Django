@@ -48,8 +48,8 @@ def home(request):
     return render(request,"home.html",{'data':data})
 
 
-def aboutPage(request):
-    return render(request,'index.html')
+def aboutPage(request,id):
+    return render(request,'index.html',{'id':id})
 
 def contact(request):
     data=[

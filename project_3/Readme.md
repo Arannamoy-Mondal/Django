@@ -36,6 +36,8 @@ STATICFILES_DIRS=[BASE_DIR/'static']
 <link rel="stylesheet" href="{% static 'stysheet.css' %}">
 ```
 
+#
+
 <div id="urlTag">
 <a href="#topic">Topic</a>
 <h1>URL Tag:</h1>
@@ -77,7 +79,42 @@ def aboutPage(request):
 
 </div>
 
+#
 
+<div id="passValueInURL">
+<a href="#topic">Topic</a>
+<h1>Pass Value In URl:</h1>
+<h3>Sample: `http://127.0.0.1:8000/about/1/` </h3> 
+
+`urls.py:`
+
+```py
+
+path('about/<int:id>/',views.aboutPage,name='about'),
+
+```   
+
+<hr>
+
+`views.py`
+
+```py
+
+def aboutPage(request,id):
+    return render(request,'index.html',{'id':id})
+
+```
+
+`base.html`
+
+```
+<a class="nav-link" href="{% url 'about' id=1 %}">About</a>
+
+```
+
+</div>
+
+#
 
 <h1 class="heading">Template Inheritance:</h1>
 <h3 class="details">Two type of templates. 1. Parent templates (base.html), 2. Child templates.</h3>

@@ -38,3 +38,36 @@ def aboutPage(request):
 ```
 
 </div>
+
+<div id="passValueInURL">
+<a href="#topic">Topic</a>
+<h1>Pass Value In URl:</h1>
+<h3>Sample: `http://127.0.0.1:8000/about/1/` </h3> 
+
+`urls.py:`
+
+```py
+
+path('about/<int:id>/',views.aboutPage,name='about'),
+
+```   
+
+<hr>
+
+`views.py`
+
+```py
+
+def aboutPage(request,id):
+    return render(request,'index.html',{'id':id})
+
+```
+
+`base.html`
+
+```
+<a class="nav-link" href="{% url 'about' id=1 %}">About</a>
+
+```
+
+</div>
