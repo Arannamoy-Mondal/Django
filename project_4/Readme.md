@@ -2,8 +2,9 @@
 <ol class="topic-container" id="topic">
         <li class="topic" style="color: white;font-size: 1.5rem;"><a href="#csrfToken">CSRF Token</a></li>
         <li class="topic" style="color: white;font-size: 1.5rem;"><a href="#getPostMethod">Get Post Method</a></li>
-        <li class="topic" style="color: white;font-size: 1.5rem;">Topic Name</li>
-        <li class="topic" style="color: white;font-size: 1.5rem;">Topic Name</li>
+        <li class="topic" style="color: white;font-size: 1.5rem;"><a href="#builtInFromOfDjango">Built in form of django</a></li>
+        <li class="topic" style="color: white;font-size: 1.5rem;"><a href="#apiForm">API Form</a></li>
+        <li style="font-size: 1.5rem;"><a href="#crispyForm">Crispy Form</a></li>
 </ol>
 
 <div id="csrfToken">
@@ -26,3 +27,44 @@
     <h3>Check line no 2-11 of python code.</h3>
 </div>
 
+<div id="builtInFromOfDjango">
+    <a href="#topic">Topic</a>
+    <h1>Built in form of django</h1>
+    <h3>2 type of form. API form and Model Form.</h3>
+</div>
+
+<div id="apiForm">
+    <a href="#topic">Topic</a>
+    <h1>API Form</h1>
+    <h3>Python code convert in HTML.</h3>
+    <img src="./static/CodeSS/builtInForm-1-py.png" alt="">
+    <img src="./static/CodeSS/builtInForm-1-views-py.png" alt="">
+    <img src="./static/CodeSS/builtInForm-1-html.png" alt="">
+    <h3>Task: Show input data in backend and output.html page.</h3>
+    <img src="./static/CodeSS/builtInForm-2-views-py.png" alt="">
+    <h2>N.B. If you are unable to solve this please recap Django form topic.</h2>
+</div>
+
+<div id="crispyForm">
+    <a href="#topic">Topic</a>
+    <h1>Crispy Form</h1>
+    <h3>You can read from <a href="https://django-crispy-forms.readthedocs.io/en/latest/">here.</a></h3>
+    
+`Installation command ( use venv for installation):`
+    
+```txt
+pip install crispy-bootstrap5
+```
+`Add this line inside the INSTALLED_APP of setting.py`
+
+```txt
+'crispy_forms',
+'crispy_bootstrap5'
+```
+`Add this line next to INSTALLED_APP of setting.py`
+
+```txt 
+CRISPY_ALLOWED_TEMPLATE_PACK="bootstrap5"
+CRISPY_TEMPLATE_PACK='bootstrap5'
+```
+</div>
