@@ -49,6 +49,7 @@ def home(request):
 
 
 def aboutPage(request,id):
+    print(request.GET)
     return render(request,'index.html',{'id':id})
 
 def contact(request):
