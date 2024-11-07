@@ -3,10 +3,9 @@
 {% load crispy_forms_tags %}
 
 <h1 class="text-center text-[2.5rem]">Built in form of django</h1>
-<form method="post" action="{% url 'output' %}">
+<form method="post" action="{% url 'output' %}" style="width: 80%;margin: auto;">
     {% csrf_token %}
     {{form | crispy}}
-    {{form.as_p}}
     <button>Submit</button>
 </form>
 {% endblock %}
