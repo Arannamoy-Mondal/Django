@@ -32,6 +32,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS=[BASE_DIR/'static'] 
 
 ```
+
 ```html
 <link rel="stylesheet" href="{% static 'stysheet.css' %}">
 ```
@@ -49,7 +50,7 @@ STATICFILES_DIRS=[BASE_DIR/'static']
 
 <img src="../urlTagging.png">
 
-<h3>In this, ss line no 6,7,8,9 has an extra parameter (name="someThing") must be given and name parameter will be same as <code><pre>href="{% url "someThing"  %}"</pre></code> double quote name.</h3>
+<h3>In this, ss line no 6,7,8,9 has an extra parameter (name="someThing") must be given and name parameter will be same as double quote name.<code><pre>href="{% url "someThing"  %}"</pre></code></h3>
 
 ```html
 
