@@ -67,4 +67,8 @@ pip install crispy-bootstrap5
 CRISPY_ALLOWED_TEMPLATE_PACK="bootstrap5"
 CRISPY_TEMPLATE_PACK='bootstrap5'
 ```
+
+`HTML Code:`
+    <img src="./static/CodeSS/crispyForm-1-html.png" alt="">
+`N.B. Check line no 3,7,8.`
 </div>
