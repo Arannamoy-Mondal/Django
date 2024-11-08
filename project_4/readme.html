@@ -80,11 +80,8 @@ CRISPY_TEMPLATE_PACK='bootstrap5'
 
 `Syntax of widget:` <br>
 `widget=form.dataType(attrs={'attribute_name_of_html':'attribute_value'})` <br>
-`Sample code of widget for dateTime:`
-
-```py
-dateTimeField=forms.DateTimeField(widget=forms.DateInput(attrs={'type':'datetime-local'})) 
-```
+`Sample code of widget for dateTime:` <br>
+`dateTimeField=forms.DateTimeField(widget=forms.DateInput(attrs={'type':'datetime-local'}))`
 
 `Understanding:dataType means DateTimeField`
 <img src="./static/CodeSS/builtInForm-3-widget.png" alt="">
