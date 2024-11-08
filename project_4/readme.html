@@ -76,6 +76,18 @@ CRISPY_TEMPLATE_PACK='bootstrap5'
 <div id="djangoFormArgument">
     <a href="#topic">Topic</a>
     <h1>Django Form Argument</h1>
-    <a href="https://medium.com/@aman_adastra/day-24-of-100-days-of-django-form-field-arguments-in-django-7175990ca7aa">Medium</a>
-    <a href="https://www.geeksforgeeks.org/django-form-build-in-fields-argument/">GFG</a>
+    <h3>Using widget can use html attribute.</h3>
+
+`Syntax of widget:` <br>
+`widget=form.dataType(attrs={'attribute_name_of_html':'attribute_value'})` <br>
+`Sample code of widget for dateTime:`
+
+```py
+dateTimeField=forms.DateTimeField(widget=forms.DateInput(attrs={'type':'datetime-local'})) 
+```
+
+`Understanding:dataType means DateTimeField`
+<img src="./static/CodeSS/builtInForm-3-widget.png" alt="">
+<h3>For more visit, <a href="https://medium.com/@aman_adastra/day-24-of-100-days-of-django-form-field-arguments-in-django-7175990ca7aa">Medium</a>
+    <a href="https://www.geeksforgeeks.org/django-form-build-in-fields-argument/">,GFG</a></h3>
 </div>
