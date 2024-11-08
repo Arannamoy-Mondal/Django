@@ -5,6 +5,7 @@
         <li class="topic" style="color: white;font-size: 1.5rem;"><a href="#builtInFromOfDjango">Built in form of django</a></li>
         <li class="topic" style="color: white;font-size: 1.5rem;"><a href="#apiForm">API Form</a></li>
         <li style="font-size: 1.5rem;"><a href="#crispyForm">Crispy Form</a></li>
+        <li style="font-size: 1.5rem;"><a href="#djangoFormArgument">Django Form Argument</a></li>
 </ol>
 
 <div id="csrfToken">
@@ -70,5 +71,9 @@ CRISPY_TEMPLATE_PACK='bootstrap5'
 
 `HTML Code:`
     <img src="./static/CodeSS/crispyForm-1-html.png" alt="">
-`N.B. Check line no 3,7,8.`
+</div>
+
+<div id="djangoFormArgument">
+    <a href="#topic">Topic</a>
+    <h1>Django Form Argument</h1>
 </div>
