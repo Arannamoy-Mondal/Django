@@ -9,5 +9,7 @@ urlpatterns = [
     path('contact/',views.contactPage,name='contact'),
     path('signUpForms/',views.signUpForms,name='signUpForms'),
     path('formOfDjango/',views.formOfDjango,name='formOfDjango'),
-    path('output',views.output,name='output')
+    path('output',views.passwordVerification,name='output'),
+    path('Buit_in_validator_of_django_form/',views.Buit_in_validator_of_django_form,name='builtInValidator'),
+    path('login/',views.logInForm,name='login')
 ]

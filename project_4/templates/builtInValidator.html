@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %} Buit
+in validator of django form
+<form method="post">
+    {% csrf_token %}
+  {{form|crispy}}
+  <button>Submit</button>
+</form>
+{% endblock %}
+
+<!-- action="{% url 'output' %}"  -->

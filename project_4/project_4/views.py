@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from . import form 
+from django.core import validators
+from django import forms
 def home(request):
     print(request.POST)
     if(request.POST):
@@ -27,9 +29,36 @@ def formOfDjango(request):
     tmp=form.contactForm(request.POST)
     return render(request,'builtInFormOfDjango.html',{'form':tmp})
 
-def output(request):
-    pass
-    tmp=form.contactForm(request.POST)
-    if tmp.is_valid(): # check that this form input is valid or invalid
-        print(tmp.cleaned_data) # just take raw data no HTML tag
-        return render(request,'output.html',{'form':tmp})
+# def output(request):
+#     if request.method=='POST':
+#        form1=form.logIn(request.POST)
+#        password=request.POST.get('password')
+#        confpass=request.POST.get('con')
+#        print(password)
+#        if form1.is_valid():
+#            if confpass==password:
+#               return render(request,'ouput.html',{'email':request.POST.get('email')})
+#            else:
+#                raise forms.ValidationError("Wrong Credential")
+#     return render(request,'login.html',{'form':form1})
+    
+def Buit_in_validator_of_django_form(request):
+    logInForm=form.logIn(request.POST)
+    return render(request,'builtInValidator.html',{'form':logInForm})
+        
+def logInForm(request):
+    form1=form.logIn(request.POST)
+    return render(request,'login.html',{'form':form1})
+
+def passwordVerification(request):
+    if request.method=='POST':
+       form1=form.logIn(request.POST)
+       password=request.POST.get('password')
+       confpass=request.POST.get('con')
+       print(password)
+       if form1.is_valid():
+           if confpass==password:
+              return render(request,'output.html',{'email':request.POST.get('email')})
+           else:
+               return render(request,'login.html',{'form':form1})
+    return render(request,'login.html',{'form':form1})

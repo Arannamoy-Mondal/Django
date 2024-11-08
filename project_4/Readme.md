@@ -6,6 +6,8 @@
         <li class="topic" style="color: white;font-size: 1.5rem;"><a href="#apiForm">API Form</a></li>
         <li style="font-size: 1.5rem;"><a href="#crispyForm">Crispy Form</a></li>
         <li style="font-size: 1.5rem;"><a href="#djangoFormArgument">Django Form Argument</a></li>
+        <li style="font-size: 1.5rem;"><a href="#formValidation">Form Validation</a></li>
+        <li style="font-size: 1.5rem;"><a href="#builtInValidators">Buit in form validator of django</a></li>
 </ol>
 
 <div id="csrfToken">
@@ -87,4 +89,40 @@ CRISPY_TEMPLATE_PACK='bootstrap5'
 <img src="./static/CodeSS/builtInForm-3-widget.png" alt="">
 <h3>For more visit, <a href="https://medium.com/@aman_adastra/day-24-of-100-days-of-django-form-field-arguments-in-django-7175990ca7aa">Medium</a>
     <a href="https://www.geeksforgeeks.org/django-form-build-in-fields-argument/">,GFG</a></h3>
+</div>
+
+<div id="formValidation">
+    <a href="#topic">Topic</a>
+    <h1>Form Validation</h1>
+
+`Check 7-11 and 12-17 line.`
+    <img src="./static/CodeSS/formValidation-1.png" alt="">
+
+`Check 1-7 line`
+    <img src="./static/CodeSS/formValidation-2.png" alt="">
+</div>
+
+<div id="builtInValidators">
+    <a href="#topic">Topic</a>
+    <h1>Buit in form validator of django</h1>
+    <h3>Django has some built in validation features. Previous topic of validation done by manually. But we can do this using buit in validator.</h3>
+    <h3>We need to import this package.</h3>
+
+`from django.core import validators`
+<br>
+
+`Syntax: variableName=forms.charField(validators=[validators.x(condition,message=""),y]), here if variable type is text use charField, if integer use IntegerField,x is contidion type, y is another condition`
+<br>
+
+`Some condition sample:`
+<br>
+
+`validators.MaxLengthValidator(6,message="At most 6 character"),validators.MinLengthValidator(3,message="At least 3 character")`
+<br>
+
+`validators=[validators.MaxValueValidator(52,message="For CEO position your age must be between 20 to 52. "),validators.MinValueValidator(20,message="For CEO position your age must be between 20 to 52. ")`
+<br>
+
+`validators.EmailValidator(message="Enter a valid mail")`
+<img src="./static/CodeSS/builtInValidators.png" alt="">
 </div>
