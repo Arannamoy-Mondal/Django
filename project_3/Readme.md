@@ -1,11 +1,13 @@
-<h1 style="text-align:center;font-size:2.5rem;color:white" class="heading">Part-3 contains:</h1>
-<ol>
-        <li style="color: white;font-size: 1.5rem;">Static files</li>
-        <li style="color: white;font-size: 1.5rem;">CSS framework adding</li>
-        <li style="color: white;font-size: 1.5rem;">URL Tag</li>
-        <li style="color: white;font-size: 1.5rem;">Template Inheritance</li>
+<h1 style="text-align:center;font-size:2.5rem;color:white" class="heading" id="part-3">Part-3 contains:</h1>
+<ol id="topic">
+        <li style="color: white;font-size: 1.5rem;"><a href="#staticFiles">Static files</a></li>
+        <li style="color: white;font-size: 1.5rem;"><a href="#cssFrameWorkAdding">CSS framework adding</a></li>
+        <li style="color: white;font-size: 1.5rem;"><a href="#urlTag">URL Tag</a></li>
+        <li style="color: white;font-size: 1.5rem;"><a href="#inhetiance">Template Inheritance</a></li>
 </ol>
 <hr>
+<div id="staticFiles">
+<a href="#topic">Topic</a>
 <h1 class="heading">Static files:</h1>
 <h3 class="details">Static files can be added in globally or app folder. Must change in settings.py file.</h3>
 
@@ -20,7 +22,9 @@ STATICFILES_DIRS=[BASE_DIR/'static']
 ```html
 <img src="{% static 'filename.jpeg' %}">
 ```
-
+</div>
+<div id="cssFrameWorkAdding">
+<a href="#topic">Topic</a>
 <h1 class="heading">CSS framework adding:</h1>
 <h3 class="details">Same as static files. Just add CDN link on base.html</h3>
 
@@ -36,6 +40,7 @@ STATICFILES_DIRS=[BASE_DIR/'static']
 ```html
 <link rel="stylesheet" href="{% static 'stysheet.css' %}">
 ```
+</div>
 
 #
 
@@ -123,6 +128,8 @@ def aboutPage(request,id):
 
 #
 
+<div id="inhetiance">
+<a href="#topic">Topic</a>
 <h1 class="heading">Template Inheritance:</h1>
 <h3 class="details">Two type of templates. 1. Parent templates (base.html), 2. Child templates.</h3>
 
@@ -153,7 +160,7 @@ def aboutPage(request,id):
 
 {% endblock %}
 ```
-
+</div>
 <!-- Template for readme -->
 <!-- 
 <h1 class="heading"></h1>
