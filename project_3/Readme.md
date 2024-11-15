@@ -1,9 +1,9 @@
 <h1 style="text-align:center;font-size:2.5rem;color:white" class="heading" id="part-3">Part-3 contains:</h1>
 <ol id="topic">
-        <li style="color: white;font-size: 1.5rem;"><a href="#staticFiles">Static files</a></li>
-        <li style="color: white;font-size: 1.5rem;"><a href="#cssFrameWorkAdding">CSS framework adding</a></li>
-        <li style="color: white;font-size: 1.5rem;"><a href="#urlTag">URL Tag</a></li>
-        <li style="color: white;font-size: 1.5rem;"><a href="#inhetiance">Template Inheritance</a></li>
+        <li><a href="#staticFiles">Static files</a></li>
+        <li><a href="#cssFrameWorkAdding">CSS framework adding</a></li>
+        <li><a href="#urlTag">URL Tag</a></li>
+        <li><a href="#inhetiance">Template Inheritance</a></li>
 </ol>
 <hr>
 <div id="staticFiles">
