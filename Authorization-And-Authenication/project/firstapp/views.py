@@ -91,13 +91,13 @@ def passChangeWithOutOldPassWord(req):
 def editUserData(request):
     if request.user.is_authenticated:
         if request.method == 'POST':
-            form1 =form.EditForm(request.POST, instance=request.user)
+            form1 =form.EditForm(request.POST,instance=request.user)
             if form1.is_valid():
                 messages.success(request, 'Account updated successfully')
                 form1.save()
-                print(form1.cleaned_data)
+                return redirect('profile')
         else:
-            form1 = form.EditForm()
-        return render(request, './profile.html', {'form': form1})
+            form1 = form.EditForm(instance=request.user)
+            return render(request, './editForm.html', {'form': form1})
     else:
         return redirect('signup')
