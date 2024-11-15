@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
-{% block title %}Profile{% endblock %}
 {% load crispy_forms_tags %}
+{% block title %}Log In{% endblock %}
 {% block content %}
-<h1>{{user}}'s Profile:</h1>
-<li class="nav-item"><a class="nav-link btn btn-primary" href="{% url 'changePassword' %}">Change Password</a></li>
-<li class="nav-item"><a class="nav-link btn btn-primary" href="{% url 'changePasswordWithoutOldPassword' %}">Change Password Without Old Password</a></li>
-<!-- <li class="nav-item"><a class="nav-link btn btn-primary" href="{% url 'editData' %}">Edit User Data</a></li> -->
+{% if messages %}
+{% for m in messages %}
+<h1 {%if m.tags %}class="btn btn-danger"{% endif %}>{{m}}</h1>
+{% endfor %}
+{% endif %}
+<h1 style="text-align: center;">Edit Form</h1>
 <form action="" method="post" style="width: 50%;margin: auto;">
     <!-- {{form|crispy}} -->
      {% csrf_token %}
