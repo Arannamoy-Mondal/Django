@@ -308,6 +308,53 @@ def signUp(req):
     <a href="#topic">Topic</a>
     <h1>Built in form of django</h1>
     <h3>2 type of form. API form and Model Form.</h3>
+
+```py
+from django.contrib.auth.forms import UserCreationForm,UserChangeForm
+from django.contrib.auth.models import User
+from django import forms
+from album.models import Album
+from django.forms.widgets import NumberInput
+from musician.models import Musician
+class SignUp(UserCreationForm):
+    username=forms.CharField(widget=forms.TextInput(attrs={'id':'required','placeholder':'username'}))
+    first_name=forms.CharField(widget=forms.TextInput(attrs={'id':'required','placeholder':'First Name'}))
+    last_name=forms.CharField(widget=forms.TextInput(attrs={'id':'required','placeholder':'Last Name'}))
+    email=forms.CharField(widget=forms.EmailInput(attrs={'id':'required','placeholder':'email'}))
+    class Meta:
+        model=User
+        fields=['username','first_name','last_name','email']
+
+
+
+class EditForm(UserChangeForm):
+    first_name=forms.CharField(widget=forms.TextInput(attrs={'id':'required','placeholder':'First Name'}))
+    last_name=forms.CharField(widget=forms.TextInput(attrs={'id':'required','placeholder':'Last Name'}))
+    password=None
+    class Meta:
+        model=User
+        fields=['first_name','last_name','email']
+
+
+class AddAlbum(forms.ModelForm):
+    release_Date=forms.DateTimeField(widget=NumberInput(attrs={'type': 'date'}))
+    class Meta:
+        model=Album
+        fields=['name','musician','release_Date','rating']
+        labels={
+            'name':'Album Name:',
+            'musician':'Musician Name:',
+            }
+
+
+class AddMusician(forms.ModelForm):
+    class Meta:
+        model=Musician
+        fields='__all__'
+
+```
+
+
 </div>
 
 <div id="apiForm">
