@@ -4,6 +4,7 @@
 <li><a href="#venv">Set up environment for django</a></li>
 <li><a href="#staticFiles">Static files</a></li>
 <li><a href="#cssFrameWorkAdding">CSS framework adding</a></li>
+<li><a href="#imageFile">Image file</a></li>
 <li><a href="#urlTag">URL Tag</a></li>
 <li><a href="#inhetiance">Template Inheritance</a></li>
 <li><a href="#csrfToken">CSRF Token</a></li>
@@ -793,4 +794,57 @@ def delete_album(r,id):
     return render(r,'form.html',{'form':form1,'type':'Edit Album'})
 ```
 
+</div>
+
+<div id="imageFile">
+    <li><a href="#topic">Topic</a></li>
+
+`models.py code:`
+
+```py
+
+class Blog(models.Model):
+    title=models.CharField(max_length=40)
+    description=models.TextField()
+    author=models.ForeignKey(User,on_delete=models.CASCADE)
+    date=models.DateTimeField()
+    category=models.ManyToManyField(Category)
+    image = models.ImageField(upload_to ='uploads/',blank=True,null=True) 
+
+```
+
+`settings.py code:( Debug must be True )`
+
+```py
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+```
+`urls.py code:`
+
+```py
+
+from django.contrib import admin
+from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',include('author.urls'))
+]
+
+urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    
+```
+`Template:`
+
+```html
+
+{% if blog.image %}
+      <img src="{{blog.image.url}}" alt="Picture" style="width: 200px;height: 200px;">
+{% endif %}
+
+```
 </div>
