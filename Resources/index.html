@@ -1,0 +1,46 @@
+<div id="profile">
+    <li><a href="#topic">Topic</a></li>
+<h1>Email Sending</h1>
+<h3>Please read this part carefully because it is one of the most vulnerable part of backend side. You must secure this.</h3>
+<p>Manage Your Google -> Account -> Data&Security ->  Two Factor Authentication -> App Password</p>
+<p>Create a .env type file</p>
+
+`.env`
+
+```txt
+EMAIL=yourMailAddress
+EMAIL_PASSWORD=yourAppPassword
+``
+
+`setting.py:`
+```py
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = env(EMAIL)      #sender's email-id (your email id)
+EMAIL_HOST_PASSWORD = env(EMAIL_PASSWORD)  #password associated with above email-id (app password)
+```
+
+</div>
+
+
+<div id="profile">
+    <li><a href="#topic">Topic</a></li>
+<h1>Deploy and hosting a dynamic web</h1>
+<h3>You can use <a href="https://render.com/">OnRender</a>, <a href="">Vercel</a> as your wish</h3>
+<h3>But we need all dependecies of project. It is better select all dependecies without version. Just compy past this command and get all dependencies. <a href="https://stackoverflow.com/questions/64322829/is-there-any-way-to-get-the-installed-modules-without-version-info-with-pip">For more</a></h3>
+
+```
+txt
+pip freeze | python -c "for p in __import__('sys').stdin: print(p.split('=')[0])" > requirement.txt
+```
+
+</div>
+
+<div id="profile">
+    <li><a href="#topic">Topic</a></li>
+
+<h1>Gitignore is a built in feature of git which ignore that files are mentioned in .gitignore file.</h1>
+
+</div>
