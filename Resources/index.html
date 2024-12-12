@@ -44,3 +44,99 @@ pip freeze | python -c "for p in __import__('sys').stdin: print(p.split('=')[0])
 <h1>Gitignore is a built in feature of git which ignore that files are mentioned in .gitignore file.</h1>
 
 </div>
+
+
+<div id="profile">
+    <li><a href="#topic">Topic</a></li>
+
+    ```java
+    import javafx.application.Application;
+import javafx.beans.property.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class TableViewEditExample extends Application {
+    public static class Person {
+        private final StringProperty name;
+        private final IntegerProperty age;
+
+        public Person(String name, int age) {
+            this.name = new SimpleStringProperty(name);
+            this.age = new SimpleIntegerProperty(age);
+        }
+
+        public String getName() {
+            return name.get();
+        }
+
+        public void setName(String name) {
+            this.name.set(name);
+        }
+
+        public int getAge() {
+            return age.get();
+        }
+
+        public void setAge(int age) {
+            this.age.set(age);
+        }
+
+        public StringProperty nameProperty() {
+            return name;
+        }
+
+        public IntegerProperty ageProperty() {
+            return age;
+        }
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+        TableView<Person> tableView = new TableView<>();
+        ObservableList<Person> data = FXCollections.observableArrayList(
+                new Person("John Doe", 30),
+                new Person("Jane Smith", 25)
+        );
+        tableView.setItems(data);
+
+        TableColumn<Person, String> nameColumn = new TableColumn<>("Name");
+        nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
+        nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        nameColumn.setEditable(true);
+        nameColumn.setOnEditCommit(event -> {
+            Person person = event.getRowValue();
+            person.setName(event.getNewValue());
+        });
+
+        TableColumn<Person, Integer> ageColumn = new TableColumn<>("Age");
+        ageColumn.setCellValueFactory(cellData -> cellData.getValue().ageProperty().asObject());
+        ageColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+        ageColumn.setEditable(true);
+        ageColumn.setOnEditCommit(event -> {
+            Person person = event.getRowValue();
+            person.setAge(event.getNewValue());
+        });
+
+        tableView.getColumns().addAll(nameColumn, ageColumn);
+        tableView.setEditable(true);
+
+        VBox vbox = new VBox(tableView);
+        Scene scene = new Scene(vbox);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("TableView Edit Example");
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+
+    
+    ```
+
+</div>
