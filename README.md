@@ -1170,7 +1170,7 @@ python manage.py runserver 0.0.0.0:80
 DEBUG=True
 
 ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
-
+CSRF_TRUSTED_ORIGINS = ['domainName','https://*.127.0.0.1']
 STATIC_ROOT=BASE_DIR/'staticfiles'
 WSGI_APPLICATION = 'project.wsgi.app'
 ```
@@ -1236,6 +1236,12 @@ pip install whitenoise
 
 `settings.py`
 ```py
+INSTALLED_APPS = [
+    #...
+    'whitenoise.runserver_nostatic',
+    #...
+]
+
 MIDDLEWARE = [
     # ...
     "django.middleware.security.SecurityMiddleware",
