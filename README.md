@@ -1166,14 +1166,7 @@ python manage.py runserver 0.0.0.0:80
 
 `settings.py`
 
-```py
-DEBUG=True
 
-ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
-CSRF_TRUSTED_ORIGINS = ['domainName','https://*.127.0.0.1']
-STATIC_ROOT=BASE_DIR/'staticfiles'
-WSGI_APPLICATION = 'project.wsgi.app'
-```
  
 <p>Create a vercel.json file root directory</p>
 
