@@ -1,0 +1,23 @@
+<div id="profile">
+    <li><a href="#topic">Topic</a></li>
+
+<h1>Class based view</h1>
+<h3>Resources <a href="https://ccbv.co.uk/">https://ccbv.co.uk/</a></h3>
+
+<h2>Example 1: Create View. Resource: <a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.edit/CreateView/">Click</a></h2>
+
+```py
+from django.views.generic import CreateView
+from django.urls import reverse_lazy
+class AddPostCreateView(CreateView):
+     model=modelName # model name for select model
+     form_class=formsName # form name for select form
+     template_name='add_post.html' 
+     success_url = reverse_lazy('add_post') # for redirect urls
+     def form_valid(self, form):
+            form.instance.author=self.request.user
+            return super().form_valid(form)
+
+```
+
+</div>
